@@ -8,6 +8,9 @@
     --cinza-fundo: #F4F6F5;
     --cinza-borda: #E0E0E0;
     --preto: #1A1A1A;
+    --azul: #087CF0;
+    --azul-escuro: #064A91;
+    --azul-claro: #65B8FF;
 }
 
 * {
@@ -20,7 +23,8 @@
 }
 
 body {
-    background-color: var(--cinza-fundo);
+    background: linear-gradient(to bottom, #DCEBFA 0%, #c8dcf1 35%);
+    background-attachment: fixed;
     color: var(--preto);
     display: flex;
     flex-direction: column;
@@ -28,7 +32,7 @@ body {
 }
 
 .header-principal {
-    background-color: var(--verde);
+    background: linear-gradient(to bottom, #123A65, #07182B);
     color: var(--branco);
     padding: 20px;
     text-align: center;
@@ -45,6 +49,7 @@ body {
     font-weight: 300;
     margin-top: 4px;
     opacity: 0.9;
+    color: var(--azul-claro);
 }
 
 .menu-navegacao {
@@ -61,7 +66,7 @@ body {
     padding: 10px 20px;
     cursor: pointer;
     border: none;
-    background: var(--verde-intermediario);
+    background: var(--azul);
     color: var(--branco);
     border-radius: 6px;
     text-decoration: none;
@@ -71,7 +76,7 @@ body {
 }
 
 .btn-login:hover{
-    background-color: var(--verde-escuro);
+    background-color: var(--azul-escuro);
 }
 
 
@@ -86,7 +91,7 @@ body {
 
 .menu-navegacao a:hover,
 .menu-navegacao a.active {
-    background-color: var(--verde-escuro);
+    background-color: var(--azul-escuro);
 }
 
 /* --- ESTRUTURA GERAL E LAYOUT --- */
@@ -104,7 +109,7 @@ main {
 }
 
 .titulo-secao {
-    color: var(--verde);
+    color: #102C4A;
 }
 
 /* --- PLANOS (INDEX.HTML) --- */
@@ -117,13 +122,14 @@ main {
 }
 
 .PlanoStart, .PlanoGold, .PlanoPlatinum, .PlanoProfissional, .PlanoMaster{
-    background: var(--branco);
-    border: 1px solid var(--cinza-borda);
+    background: linear-gradient(to bottom, #243A53, #111D2B);
+    color: var(--branco);
+    border: 1px solid #42658C;
     border-radius: 12px;
     padding: 30px 20px;
     width: 300px;
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -160,7 +166,7 @@ main {
     font-size: 1.4rem;
     font-weight: bold;
     margin-bottom: 15px;
-    color: var(--preto);
+    color: var(--branco);
 }
 
 ul {
@@ -183,8 +189,8 @@ ul li {
     padding: 10px 20px;
     cursor: pointer;
     border: none;
-    background: var(--verde);
-    color: var(--branco);
+    background: linear-gradient(to right, #087CF0, #0758B5);
+    color: #FFFFFF;
     border-radius: 6px;
     text-decoration: none;
     font-size: 1.1rem;
@@ -193,7 +199,7 @@ ul li {
 }
 
 .btn-adquirir:hover, .btn-enviar:hover {
-    background-color: var(--verde-escuro);
+    background: linear-gradient(to right, #065DB5, #043E80);
 }
 
 /* --- CONTEÚDO E SOBRE NÓS (SOBRE.HTML) --- */
@@ -202,18 +208,18 @@ ul li {
 }
 
 .secao-texto {
-    background: var(--branco);
+    background: linear-gradient(to bottom, #243A53, #111D2B);
+    color: var(--branco);
     padding: 30px;
     border-radius: 12px;
-    border: 1px solid var(--cinza-borda);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid #42658C;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
-.secao-texto h2, .secao-texto h1 {
-    color: var(--verde);
+.secao-texto h2 {
+    color: var(--azul-claro);
     margin-top: 15px;
     margin-bottom: 10px;
-    text-align: center;
 }
 
 .secao-texto p {
@@ -237,17 +243,18 @@ ul li {
 }
 
 .card-info, .form-contato {
-    background: var(--branco);
-    border: 1px solid var(--cinza-borda);
+    background: linear-gradient(to bottom, #243A53, #111D2B);
+    color: var(--branco);
+    border: 1px solid #42658C;
     border-radius: 12px;
     padding: 30px;
     flex: 1;
     min-width: 300px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 .card-info h3, .form-contato h3, .card-info h1, .card-info h2 {
-    color: var(--verde);
+    color: var(--azul-claro);
     font-size: 1.6rem;
     margin-bottom: 15px;
 }
@@ -266,88 +273,115 @@ ul li {
 .campo-form label {
     font-size: 1.1rem;
     margin-bottom: 5px;
-    color: var(--preto);
+    color: var(--branco);
 }
 
 .campo-form input, .campo-form textarea {
     padding: 10px;
-    border: 1px solid var(--cinza-borda);
+    border: 1px solid #526A85;
     border-radius: 6px;
     font-size: 1rem;
     outline: none;
+    background-color: #172638;
+    color: #FFFFFF;
 }
 
 .campo-form input:focus, .campo-form textarea:focus {
-    border-color: var(--verde);
+    border-color: var(--azul-claro);
 }
 
 /* --- FOOTER UNIFICADO --- */
 .footer-principal {
-    background-color: var(--verde-escuro);
+    background: linear-gradient(to bottom, #07182B, #030A12);
     color: var(--branco);
     text-align: center;
     padding: 20px;
     margin-top: auto;
     font-size: 1rem;
+    border-top: 2px solid var(--azul);
 }
 
-.box-login{
-    background: var(--branco);
-    border: 1px solid var(--cinza-borda);
-    border-radius: 12px;
-    position: relative;
-    top: 25px;
-    left: 240px;
-    padding: 30px 20px;
-    width: 800px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+.container-login {
+    flex: 1;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    color: var(--verde);
-    font-size: 1.6rem;
-    margin-bottom: 10px;
+    padding: 40px 20px;
 }
 
-.box-login input{
-    width: 90%;
-    background-color: transparent;
-    height: 30px;
-    border-radius: 12PX;
-}
-
-.box-bv{
-    background: var(--verde-escuro);
-    border: 1px solid var(--cinza-borda);
-    color: var(--branco);
-    border-radius: 12px;
-    position:fixed;
-    top: 155px;
-    right: 900px;
-    padding: 50px 30px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.box-bv a{
-    display: inline-block;
-    margin-top: 15px;
-    padding: 10px 140px;
-    cursor: pointer;
-    border: none;
-    background: var(--verde);
-    color: var(--branco);
-    border-radius: 6px;
-    text-decoration: none;
-    font-size: 1.1rem;
-    transition: background-color 0.3s ease;
+.card-login {
     width: 100%;
+    max-width: 430px;
+    padding: 35px;
+    background: linear-gradient(to bottom, #243A53, #111D2B);
+    color: var(--branco);
+    border: 1px solid #42658C;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-login h2 {
+    color: var(--azul-claro);
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+}
+
+.texto-login {
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.form-login {
+    width: 100%;
+}
+
+.form-login .campo-form input {
+    width: 100%;
+}
+
+.opcoes-login {
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+.opcoes-login label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.opcoes-login input {
+    accent-color: var(--azul);
+    cursor: pointer;
+}
+
+.rodape-login {
+    text-align: center;
+    margin-top: 25px;
+    line-height: 1.8;
+}
+
+.rodape-login a {
+    color: var(--azul-claro);
+    text-decoration: none;
+}
+
+.rodape-login a:hover {
+    text-decoration: underline;
+}
+
+.aviso-login {
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid var(--cinza-borda);
+    text-align: center;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #B9C9DC;
 }
 
 .box-cadastro{
@@ -375,16 +409,18 @@ ul li {
 }
 
 .politica-container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 0 20px;
-    font-family: Arial, sans-serif;
-    color: #333333;
-    line-height: 1.6;
+    background: linear-gradient(to bottom, #243A53, #111D2B);
+    color: var(--branco);
+    border: 1px solid #42658C;
+    border-radius: 12px;
+    padding: 30px;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 .politica-container h1 {
-    color: #00c2cb;
+    color: var(--azul-claro);
     font-size: 32px;
     margin-bottom: 20px;
     border-bottom: 2px solid #eeeeee;
@@ -392,7 +428,7 @@ ul li {
 }
 
 .politica-container h3 {
-color: #111111;
+color: var(--azul);
 font-size: 20px;
 margin-top: 30px;
 margin-bottom: 10px;
@@ -422,9 +458,13 @@ padding-left: 20px;
 
 .data-atualizacao {
     font-style: italic;
-    color: #777777;
+    color: var(--branco);
     margin-top: 40px;
 }
+
+/* Virus */
+
+
 .virus-container {
     max-width: 1100px;
     margin: 40px auto;
@@ -457,18 +497,18 @@ padding-left: 20px;
 }
 
 .virus-grid h2 {
-    color: var(--verde);
+    color: var(--azul-claro);
     align-self: center;
 }
 .virus-card {
-    background-color: #ffffff;
-    border: 1px solid #eeeeee;
+    background: linear-gradient(to bottom, #243A53, #111D2B);
+    color: var(--branco);
+    border: 1px solid #42658C;
     border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     padding: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex: 1;
+    min-width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 .virus-card-top {
@@ -492,7 +532,7 @@ padding-left: 20px;
 .virus-card-top h2 {
     margin: 0;
     font-size: 24px;
-    color: var(--verde);
+    color: var(--azul);
     font-family: "Libre Caslon Condensed", serif;;
 }
 
@@ -523,13 +563,13 @@ padding-left: 20px;
 .detail-block h3 {
     font-size: 16px;
     font-weight: bold;
-    color: #111111;
+    color: var(--azul-claro);
     margin: 0 0 10px 0;
 }
 
 .detail-block p {
     font-size: 14px;
-    color: #555555;
+    color: var(--branco);
     line-height: 1.6;
     margin: 0;
 }
